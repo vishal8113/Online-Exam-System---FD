@@ -1,0 +1,7 @@
+main {
+  min-height: calc(100vh - 56px);
+}
+
+.navbar-brand {
+  letter-spacing: 0.3px;
+}
