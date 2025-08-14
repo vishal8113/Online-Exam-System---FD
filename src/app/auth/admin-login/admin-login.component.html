@@ -1,0 +1,44 @@
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-5">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4 p-md-5">
+            <h1 class="h4 fw-semibold mb-3 text-center">Admin Login</h1>
+            <p class="text-body-secondary text-center mb-4">Use your inbuilt admin credentials to continue.</p>
+
+            <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+              <div class="mb-3">
+                <label for="loginId" class="form-label">Login ID</label>
+                <input id="loginId" type="text" class="form-control" formControlName="loginId" [class.is-invalid]="f.loginId.touched && f.loginId.invalid">
+                <div class="invalid-feedback" *ngIf="f.loginId.touched && f.loginId.errors?.['required']">Login ID is required</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input id="password" type="password" class="form-control" formControlName="password" [class.is-invalid]="f.password.touched && f.password.invalid">
+                <div class="invalid-feedback" *ngIf="f.password.touched && f.password.errors?.['required']">Password is required</div>
+                <div class="invalid-feedback d-block" *ngIf="f.password.touched && f.password.errors?.['minlength']">At least 6 characters</div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="form-check">
+                  <input id="remember" type="checkbox" class="form-check-input" formControlName="remember">
+                  <label class="form-check-label" for="remember">Remember me</label>
+                </div>
+                <a routerLink="/" class="small">Back to Home</a>
+              </div>
+
+              <button class="btn btn-primary w-100" type="submit" [disabled]="isSubmitting">
+                <span class="spinner-border spinner-border-sm me-2" *ngIf="isSubmitting"></span>
+                Login
+              </button>
+
+              <div class="alert alert-danger mt-3 py-2" *ngIf="errorMessage">{{ errorMessage }}</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

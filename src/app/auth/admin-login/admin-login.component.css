@@ -1,0 +1,12 @@
+.card {
+  border-radius: 1rem;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25);
+  border-color: #4f46e5;
+}
+
+button[disabled] {
+  opacity: 0.7;
+}

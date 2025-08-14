@@ -13,3 +13,29 @@ html, body {
 body, .card, .navbar, .btn, .form-control, .bg-body, .bg-body-tertiary {
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
+
+/* Global button color-only improvements */
+.btn-primary {
+  --bs-btn-bg: #4f46e5;          /* indigo-600 */
+  --bs-btn-border-color: #4f46e5;
+  --bs-btn-hover-bg: #4338ca;    /* indigo-700 */
+  --bs-btn-hover-border-color: #4338ca;
+  --bs-btn-active-bg: #3730a3;   /* indigo-800 */
+  --bs-btn-active-border-color: #3730a3;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #4f46e5;
+  --bs-btn-border-color: #4f46e5;
+  --bs-btn-hover-bg: #4f46e5;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-border-color: #4338ca;
+  --bs-btn-active-bg: #4338ca;
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-border-color: #3730a3;
+}
+
+.btn-link {
+  --bs-link-color: #4f46e5;
+  --bs-link-hover-color: #4338ca;
+}
